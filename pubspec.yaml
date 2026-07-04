@@ -1,0 +1,114 @@
+name: ai_urban_nexus_mobile
+description: AI Urban Nexus – Official Mobile Application | COMSATS FYP 2025-26
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+  flutter: ">=3.24.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # State Management & Navigation
+  flutter_riverpod: ^3.0.3
+  go_router: ^17.0.0
+
+  # Network & Connectivity
+  dio: ^5.9.0
+  connectivity_plus: ^7.0.0
+  socket_io_client: ^3.1.2
+
+  # Maps
+  flutter_map: ^8.2.2
+  flutter_map_animations: ^0.9.0
+  latlong2: ^0.9.1
+  google_maps_flutter: ^2.14.0
+  geolocator: ^14.0.2
+  geocoding: ^4.0.0
+
+  # Firebase & Notifications (Latest compatible resolvable versions)
+  firebase_core: ^4.2.1
+  firebase_auth: ^6.1.2
+  firebase_database: ^12.1.0
+  cloud_firestore: ^6.1.0
+  firebase_storage: ^13.0.4
+  firebase_messaging: ^16.0.4
+  flutter_local_notifications: ^19.5.0
+
+  # Media & Permissions
+  image_picker: ^1.2.1
+  permission_handler: ^12.0.1
+
+  # Charts & Animations
+  fl_chart: ^1.1.1
+  lottie: ^3.3.2
+  flutter_svg: ^2.0.10
+
+  # Local Storage
+  shared_preferences: ^2.5.4
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # Utilities
+  intl: ^0.20.2
+  dotted_border: ^3.1.0
+  url_launcher: ^6.3.2
+  just_audio: ^0.10.5
+  speech_to_text: ^7.3.0
+  flutter_polyline_points: ^2.1.0
+  flutter_tts: ^4.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+# ────────────────────────────── ASSETS ──────────────────────────────
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/lottie/
+    - assets/animations/
+    - assets/sound/
+    - assets/fonts/
+    - assets/icons/car.png
+    - assets/icons/bus.png
+    - assets/icons/truck.png
+    - assets/icons/taxi.png
+    - assets/icons/bike.png
+    - assets/icons/police_car.png
+    - assets/lottie/vehicle_moving.json
+    - assets/lottie/alert.json
+    - assets/lottie/success.json
+    - assets/icons/flutter.png
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/ai-urban-nexus.png"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/icons/ai-urban-nexus.png"
+
+# ────────────────────────────── DEPENDENCY OVERRIDES ──────────────────────────────
+# Fixes platform interface conflicts for geocoding
+dependency_overrides:
+  geocoding_platform_interface: ^3.2.0

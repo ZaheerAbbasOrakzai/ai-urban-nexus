@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">huggingface.co</domain>
+        <domain includeSubdomains="true">hf.space</domain>
+        <domain includeSubdomains="true">abbasorakzai777-ai-urban-nexus-pakistan.hf.space</domain>
+        <domain includeSubdomains="true">abbasorakzai777-crime-detection.hf.space</domain>
+    </domain-config>
+</network-security-config>
