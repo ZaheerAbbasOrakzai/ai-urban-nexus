@@ -1,8 +1,3 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
 name: Flutter CI
 
 on:
@@ -24,6 +19,11 @@ jobs:
           flutter-version: '3.24.0'
           channel: 'stable'
 
+      # Verify Flutter is installed correctly
+      - name: Verify Flutter installation
+        run: flutter --version
+
+      # Install dependencies using flutter pub
       - name: Install dependencies
         run: flutter pub get
 
